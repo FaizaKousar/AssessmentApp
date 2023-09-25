@@ -13,7 +13,7 @@ import { MatSort } from '@angular/material/sort';
 })
 export class AppComponent implements OnInit {
   title = 'AssessmentApp';
-  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'gender', 'company','action'];
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'gender', 'company','residence','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

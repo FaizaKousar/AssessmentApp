@@ -18,28 +18,40 @@
   },
   "candidates": [
     {
-      "firstName": "faiza",
-      "lastName": "dadad",
+      "firstName": "Faiza",
+      "lastName": "Satti",
       "email": "fs@gmail.com",
       "gender": "2",
-      "company": "ddd",
+      "company": "Nayel Soluti",
+      "residence": "Rawalpindi",
       "id": 1
     },
     {
-      "firstName": "Qaisaraa",
-      "lastName": "Jee",
-      "email": "faf@gmail.com",
+      "firstName": "Hello",
+      "lastName": "World",
+      "email": "hello@gmail.com",
       "gender": "1",
-      "company": "sss",
+      "company": "Oak St Tech",
+      "residence": "Islamabad",
       "id": 2
     },
     {
-      "firstName": "Lady",
-      "lastName": "Gaga",
+      "firstName": "LandCruiser",
+      "lastName": "Gem",
       "email": "llg@hotmail.com",
       "gender": "3",
-      "company": "ddd",
+      "company": "GHn",
+      "residence": "NYC",
       "id": 3
+    },
+    {
+      "firstName": "Faiza Test ",
+      "lastName": "Satti2",
+      "email": "dests@gmail.com",
+      "gender": "2",
+      "company": "Test ",
+      "residence": "Test City",
+      "id": 4
     }
   ]
 }

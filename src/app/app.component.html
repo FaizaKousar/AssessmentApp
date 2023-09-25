@@ -11,7 +11,7 @@
 <div class="main-body">
   <mat-form-field>
     <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Faiza" #input>
+    <input matInput (keyup)="applyFilter($event)" #input>
   </mat-form-field>
 
   <div class="mat-elevation-z8">
@@ -49,6 +49,11 @@
       <ng-container matColumnDef="company">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
         <td mat-cell *matCellDef="let row"> {{row.company}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="residence">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Residence </th>
+        <td mat-cell *matCellDef="let row"> {{row.residence}} </td>
       </ng-container>
 
       <ng-container matColumnDef="action">

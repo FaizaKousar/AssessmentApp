@@ -3,41 +3,63 @@
 </div>
 <form [formGroup]="candForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
-        <div class="row">
+        <div class="row"  style="margin-top: 0px">
             <mat-form-field appearance="outline">
                 <mat-label>First Name</mat-label>
-                <input matInput type="text" placeholder="Ex. Faiza" formControlName="firstName">
+                <input matInput type="text" placeholder="Ex. Faiza" formControlName="firstName"required>
+                <mat-error *ngIf="formControls['firstName'].errors">                   
+                    <div *ngIf="formControls['firstName'].errors['required']">First Name is required</div>
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Last Name</mat-label>
-                <input matInput type="text" placeholder="Ex. Faiza" formControlName="lastName">
+                <input matInput type="text" placeholder="Ex. Faiza" formControlName="lastName" required>
+                <mat-error *ngIf="formControls['lastName'].errors">                   
+                    <div *ngIf="formControls['lastName'].errors['required']">Last Name is required</div>
+                </mat-error>
             </mat-form-field>
         </div>
         
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput type="email" placeholder="Ex. Faiza@gmail.com" formControlName="email">
+                <input matInput type="email" class="form-control"  placeholder="Ex. Faiza@gmail.com" formControlName="email" required>               
+                <mat-error *ngIf="formControls['email'].errors">                   
+                    <div *ngIf="formControls['email'].errors['required']">Email is required</div>
+                    <div *ngIf="formControls['email'].errors['email']">Email format is incorrect</div>
+                </mat-error>
             </mat-form-field>
+            
+            
+
             <mat-form-field appearance="outline">
                 <mat-label>Residence</mat-label>
-                <input matInput type="text" placeholder="Ex. Street 10, Pakistan">
+                <input matInput type="text" placeholder="Ex. Street 10, Pakistan" formControlName="residence" required>
+                <mat-error *ngIf="formControls['residence'].errors">                   
+                    <div *ngIf="formControls['residence'].errors['required']">Residence is required</div>
+                </mat-error>
             </mat-form-field>
         </div>
 
         <div class="row">
-            <mat-radio-group aria-label="Select an option" formControlName="gender">
+            <mat-radio-group aria-label="Select an option" formControlName="gender" required>
                 <mat-label>Gender</mat-label>
                 <mat-radio-button value="1">Male</mat-radio-button>
                 <mat-radio-button value="2">Female</mat-radio-button>
                 <mat-radio-button value="3">Other</mat-radio-button>
+                <mat-error *ngIf="formControls['gender'].errors">                   
+                    <div *ngIf="formControls['gender'].errors['required']">Gender is required</div>
+                </mat-error>
             </mat-radio-group>
         </div>   
 
         <div class="row">
         <mat-form-field appearance="outline">
                 <mat-label>Company</mat-label>
-                <input matInput type="text" placeholder="Ex. Microsoft" formControlName="company">
+                <input matInput type="text" placeholder="Ex. Microsoft" formControlName="company" required>
+                <mat-error *ngIf="formControls['company'].errors">                   
+                    <div *ngIf="formControls['company'].errors['required']">Company is required</div>
+                </mat-error>
             </mat-form-field>
         </div>
         
